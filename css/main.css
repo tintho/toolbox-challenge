@@ -1,6 +1,30 @@
 #gameBoard img {
-    width: 25%;
+    width: 15%;
     height: 25%;
     padding: 5px;
     box-sizing: border-box;
 }
+
+body {
+    background-image: url(../img/stockvault-city-skyline-at-sunset-113039.jpg);
+    font-size: 18px;
+    /*font-weight: 300; */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gameBoard {
+    position: relative;
+}
+
+.explain {
+    margin-right: 61%
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background: rgba(240,238,200, 0.6);
+    position:absolute;
+    right: 20px;
+
+}
+
