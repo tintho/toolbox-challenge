@@ -1,5 +1,5 @@
 #gameBoard img {
-    width: 15%;
+    width: 25%;
     height: 25%;
     padding: 5px;
     box-sizing: border-box;
@@ -13,18 +13,28 @@ body {
     background-attachment: fixed;
 }
 
+main {
+    color: #FFFFFF;
+}
+
 .gameBoard {
     position: relative;
 }
 
+button {
+    color: #000000;
+}
+
 .explain {
-    margin-right: 61%
+    color: #000000;
+    margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
-    background: rgba(240,238,200, 0.6);
+    margin-left: 60%;
+    background: rgba(240,238,200, 0.8);
     position:absolute;
     right: 20px;
+    top: 130px;
 
 }
 

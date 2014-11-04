@@ -2,6 +2,8 @@
 
 "use strict";
 
+var timer;
+
 var tiles = [];
 var i = 0;
 for (i = 1; i <= 32; i++) {
@@ -15,7 +17,18 @@ for (i = 1; i <= 32; i++) {
 
 // when document is ready
 $(document).ready(function() {
+
     $('#startGame').click(function() {
+        var gameBoard = $('#gameBoard');
+        gameBoard.empty();
+        var seconds = Date.now();
+        clearInterval(timer);
+        timer = window.setInterval(function() {
+            var elapsedSeconds = (Date.now() - seconds) / 1000;
+            elapsedSeconds = Math.floor(elapsedSeconds);
+            $('#elapsed-seconds').text(elapsedSeconds + ' seconds');
+        }, 1000);
+
         tiles = _.shuffle(tiles);
         var toUse = tiles.slice(0, 8);
         var pairs = [];
@@ -24,7 +37,7 @@ $(document).ready(function() {
             pairs.push(_.clone(tile));
         });
         pairs = _.shuffle(pairs);
-        var gameBoard = $('#gameBoard');
+
         var img;
         var row = $(document.createElement('div'));
         _.forEach(pairs, function(tile, elemIndex) {
@@ -42,12 +55,7 @@ $(document).ready(function() {
         });
         gameBoard.append(row);
 
-        var seconds = Date.now();
-        window.setInterval(function() {
-            var elapsedSeconds = (Date.now() - seconds) / 1000;
-            elapsedSeconds = Math.floor(elapsedSeconds);
-            $('#elapsed-seconds').text(elapsedSeconds + ' seconds');
-        }, 1000);
+
 
         $('#gameBoard img').click(function() {
             var clickedImg = $(this);
