@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
-    <head lang="en:">
+    <head lang="en">
         <meta charset="UTF-8">
         <title>Memory Game!</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
     </head>
+
     <body>
         <main class = "container-fluid">
 
             <h1>Memory Game!</h1>
             <p><button id="startGame">Start Game!</button></p>
 
-            <p>elapsed time = <span id="elapsed-seconds"></span></p>
             <section class = "row">
                 <div class = "col-md-4 explain">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, deleniti illum, iusto laudantium minus molestiae nobis nostrum provident, quos reiciendis repellendus sapiente tenetur! Amet dignissimos dolore eligendi rem. Autem, nam!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam atque consequatur, debitis ea minima quis rerum unde. Cumque ea inventore quibusdam? Culpa excepturi maiores nam, quisquam repellendus saepe voluptas?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur nihil, veniam! A amet animi assumenda cum distinctio dolores ea eveniet itaque libero, nisi quia quod reiciendis sapiente similique vitae voluptate.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad exercitationem id libero possimus, praesentium rerum. Consequuntur debitis, eveniet nam nihil nisi repudiandae saepe vero. A dolorum laborum necessitatibus neque sapiente?</p>
+                    <p>Click on the tiles and pair the images up. If you get all of them, you win!</p>
+                    <section id="topInfo" >
+                        <p><span id="elapsed-seconds"></span></p>
+                        <p><span id="missed"></span></p>
+                        <p><span id="matches"></span></p>
+                        <p><span id="remaining"></span></p>
+                    </section>
                 </div>
                 <div id="gameBoard" class = "col-md-7 gameBoard"></div>
 
